@@ -23,26 +23,40 @@
         front() {
             return this.head ? this.head.data : null;
         }
+
+        display() {
+            console.log(this.head, "current");
+            while (this.head !== null) {
+                console.log(this.head.data);
+                this.head = this.head.next;
+            }
+        }
     }
 
     SLL1 = new SLL();
     SLL1.addFront(18);
-    console.log("1", SLL1.head);
-    console.log(SLL1.front());
+    // console.log("1", SLL1.head);
+    // console.log(SLL1.front());
     SLL1.addFront(4);
-    console.log("2", SLL1.head);
+    // console.log("2", SLL1.head);
 
-    SLL1.removeFront();
-    console.log("3", SLL1.head);
-    SLL1.removeFront();
-    console.log("4", SLL1.head);
-    console.log(SLL1.front());
+    // SLL1.removeFront();
+    // console.log("3", SLL1.head);
+    // SLL1.removeFront();
+    // console.log("4", SLL1.head);
+    // console.log(SLL1.front());
+
+    SLL1.display();
+
+    // console.log(SLL1);
 
     // let current = SLL1.head;
     // while(current !== null){
     //     console.log(current.data);
     //     current = current.next;
     // }
+
+
 // Examples:
 // SLL1 = new SLL()
 // SLL1.addFront(18) => Node { data: 18, next: null }
@@ -63,3 +77,12 @@
 // SLL1.front() => 18
 // SLL1.removeFront() => null
 // SLL1.front() => null
+
+// Create display() that uses a while loop and a runner to return a string containing all list values. Build what you wish console.log(myList) did!
+// Examples:
+// SLL1 = new SLL()
+// SLL1.addFront(76) => Node { data: 76, next: null }
+// SLL1.addFront(2) => Node { data: 2, next: Node { data: 76, next: null } }
+// SLL1.display() => "2, 76"
+// SLL1.addFront(11.41) => Node { data: 11.41, next: Node { data: 2, next: Node { data: 76, next: null } } }
+// SLL1.display() => "11.41, 2, 76"
